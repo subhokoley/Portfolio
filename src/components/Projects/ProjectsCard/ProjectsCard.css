@@ -1,0 +1,131 @@
+.img_section {
+  width: 550px;
+  height: 320px;
+}
+.img_section img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.9rem;
+}
+
+.projects-card-container {
+  border-radius: 0.65rem;
+  border: 1.5px solid #6751b9;
+}
+
+.projects-card-container h6 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  border-bottom: 1px solid #6751b9;
+  padding: 1.2rem;
+  text-align: center;
+}
+.alldetails {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 3rem 1rem;
+}
+.description {
+  width: 50%;
+}
+.description ul li {
+  list-style: none;
+  line-height: 2.3rem;
+  position: relative;
+}
+
+.description ul li::after {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: #6751b9;
+  border-radius: 0.7rem;
+  position: absolute;
+  left: -1.3rem;
+  top: 0.8rem;
+}
+.visit_btn {
+  font-size: 18px;
+  padding: 8px 25px;
+  border-radius: 5px;
+  background: linear-gradient(130deg, #a993fe 0%, #7e61e7 100%);
+  color: #fff;
+  border: none;
+  outline: 1.5px solid #a892fe;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+}
+.visit_btn:hover {
+  cursor: pointer;
+  color: #a892fe;
+  background: transparent;
+}
+
+@media (max-width: 1025px) {
+  .img_section {
+    width: 400px;
+    height: 300px;
+  }
+  .description ul li {
+    font-size: 0.8rem;
+  }
+  .visit_btn {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 769px) {
+  .alldetails {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .description {
+    width: 70%;
+    padding: 1rem;
+  }
+  .img_section {
+    width: 400px;
+    height: 200px;
+  }
+  .projects-card-container {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .projects-card-container h6 {
+    font-size: 1.5rem;
+  }
+  .description ul li {
+    font-size: 0.7rem;
+  }
+  .visit_btn {
+    font-size: 10px;
+    display: block;
+    margin: 1.5rem auto 0.5rem;
+  }
+  .description a {
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .img_section {
+    width: 250px;
+    height: 150px;
+  }
+  .description ul li {
+    font-size: 0.5rem;
+    line-height: 1.5rem;
+  }
+  .projects-card-container h6 {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .alldetails {
+    padding: 1rem;
+  }
+  .visit_btn {
+    font-size: 8px;
+  }
+}

@@ -1,0 +1,138 @@
+.navbar_wrapper {
+  background: rgba(0, 0, 0, 0.1);
+  position: sticky;
+  padding: 0.5rem 0;
+  z-index: 30;
+  top: 0;
+  backdrop-filter: blur(50px);
+}
+.navbar_content {
+  max-width: 1300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  margin: 0 auto;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo img {
+  width: 60px;
+}
+.logo h2 {
+  letter-spacing: 4px;
+  font-size: 35px;
+  font-weight: 600;
+}
+.navbar_content ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.navbar_content ul li {
+  list-style: none;
+  margin: 0 1.5rem;
+}
+.menu_item {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1rem;
+  position: relative;
+  cursor: pointer;
+}
+.menu_item::before {
+  content: "";
+  width: 1rem;
+  height: 0.2rem;
+  background: linear-gradient(90deg, #a993fe 0%, #7e61e7 100%);
+  border-radius: 0.5rem;
+  position: absolute;
+  bottom: -0.6rem;
+  opacity: 0;
+  transform: translateX(-1.5rem);
+  transition: all 0.3s ease;
+}
+.menu_item:hover::before {
+  width: 100%;
+  transform: translateX(0);
+  opacity: 1;
+}
+.contact_btn {
+  font-size: 18px;
+  padding: 8px 25px;
+  border-radius: 5px;
+  background: linear-gradient(130deg, #a993fe 0%, #7e61e7 100%);
+  color: #fff;
+  border: none;
+  outline: 1.5px solid #a892fe;
+  transition: all 0.3s ease;
+}
+.contact_btn:hover {
+  cursor: pointer;
+  color: #a892fe;
+  background: transparent;
+}
+.menu_btn span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu_btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 0.4rem;
+  color: #fff;
+  background: linear-gradient(90deg, #a993fe -0.13%, #7e61e7 99.87%);
+  line-height: 0;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  display: none;
+}
+.menu_btn:hover {
+  color: #a993fe;
+  background: #000;
+  border: 1px solid #a993fe;
+}
+
+@media (max-width: 426px) {
+  .logo img {
+    width: 40px;
+  }
+  .logo h2 {
+    letter-spacing: 2px;
+    font-size: 25px;
+    font-weight: 400;
+  }
+}
+@media (max-width: 769px) {
+  .menu_btn {
+    display: block;
+  }
+  .navbar_content ul {
+    display: none;
+  }
+}
+
+@media (max-width: 1025px) {
+  .menu_item {
+    font-size: 1rem;
+  }
+  .contact_btn {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1325px) {
+  .navbar_wrapper {
+    padding: 0 2rem;
+  }
+}
